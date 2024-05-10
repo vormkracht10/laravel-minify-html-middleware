@@ -1,4 +1,6 @@
-# Laravel HTML Minify Middleware minifies HTML responses safely.
+# Laravel HTML Minify Middleware
+
+This package minifies HTML responses safely within Laravel using middleware.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vormkracht10/laravel-html-minify-middleware.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-html-minify-middleware)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/vormkracht10/laravel-html-minify-middleware/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/vormkracht10/laravel-html-minify-middleware/actions?query=workflow%3Arun-tests+branch%3Amain)
