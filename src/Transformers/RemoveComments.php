@@ -1,5 +1,7 @@
 <?php
 
+namespace Vormkracht10\MinifyHtml\Transformers;
+
 class RemoveComments
 {
     public function transform(string $html): string

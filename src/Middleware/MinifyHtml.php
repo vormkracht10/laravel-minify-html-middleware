@@ -14,24 +14,22 @@ class MinifyHtml
 
         $response = $next($request);
 
-        foreach (config('minify-html.transformers') as $x => $transformer) {
-            $response = (new $transformer)->transform($response);
+        $content = $response->getContent();
+
+        foreach (config('minify-html.transformers', []) as $x => $transformer) {
+            $content = (new $transformer)->transform($content);
         }
 
-        return $response;
+        return $response->setContent($content);
     }
 
     public function shouldMinifyHtml(Request $request)
     {
-        if (! config('minify-html.enabled')) {
-            return false;
-        }
-
         if (! in_array($request->method(), ['GET', 'HEAD'])) {
             return false;
         }
 
-        if ($request->isJson() || $request->isXml()) {
+        if ($request->isJson()) {
             return false;
         }
 
@@ -39,7 +37,7 @@ class MinifyHtml
             return false;
         }
 
-        if ($request->ajax()) {
+        if ($request->isPrecognitive() || $request->isXmlHttpRequest()) {
             return false;
         }
 
