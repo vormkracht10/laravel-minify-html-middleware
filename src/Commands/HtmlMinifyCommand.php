@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Vormkracht10\HtmlMinify\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HtmlMinifyCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-html-minify-middleware';
 
     public $description = 'My command';
 
