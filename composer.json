@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vormkracht10\\MinifyHtml\\": "src/",
-            "Vormkracht10\\MinifyHtml\\Database\\Factories\\": "database/factories/"
+            "Vormkracht10\\MinifyHtml\\": "src/"
         }
     },
     "autoload-dev": {
