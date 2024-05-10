@@ -1,12 +1,12 @@
 {
-    "name": "vormkracht10/laravel-html-minify-middleware",
-    "description": "Laravel HTML Minify Middleware minifies HTML responses safely.",
+    "name": "vormkracht10/laravel-minify-html-middleware",
+    "description": "This package minifies HTML responses in Laravel safely.",
     "keywords": [
         "Vormkracht10",
         "laravel",
-        "laravel-html-minify-middleware"
+        "laravel-minify-html-middleware"
     ],
-    "homepage": "https://github.com/vormkracht10/laravel-html-minify-middleware",
+    "homepage": "https://github.com/vormkracht10/laravel-minify-html-middleware",
     "license": "MIT",
     "authors": [
         {
@@ -34,19 +34,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Vormkracht10\\HtmlMinify\\": "src/",
-            "Vormkracht10\\HtmlMinify\\Database\\Factories\\": "database/factories/"
+            "Vormkracht10\\MinifyHtml\\": "src/",
+            "Vormkracht10\\MinifyHtml\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vormkracht10\\HtmlMinify\\Tests\\": "tests/",
+            "Vormkracht10\\MinifyHtml\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-html-minify-middleware --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-minify-html-middleware --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vormkracht10\\HtmlMinify\\HtmlMinifyServiceProvider"
+                "Vormkracht10\\MinifyHtml\\MinifyHtmlServiceProvider"
             ],
             "aliases": {
-                "HtmlMinify": "Vormkracht10\\HtmlMinify\\Facades\\HtmlMinify"
+                "MinifyHtml": "Vormkracht10\\MinifyHtml\\Facades\\MinifyHtml"
             }
         }
     },

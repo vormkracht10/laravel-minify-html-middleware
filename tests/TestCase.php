@@ -1,10 +1,10 @@
 <?php
 
-namespace Vormkracht10\HtmlMinify\Tests;
+namespace Vormkracht10\MinifyHtml\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Vormkracht10\HtmlMinify\HtmlMinifyServiceProvider;
+use Vormkracht10\MinifyHtml\MinifyHtmlServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Vormkracht10\\HtmlMinify\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Vormkracht10\\MinifyHtml\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            HtmlMinifyServiceProvider::class,
+            MinifyHtmlServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-html-minify-middleware_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_laravel-minify-html-middleware_table.php.stub';
         $migration->up();
         */
     }

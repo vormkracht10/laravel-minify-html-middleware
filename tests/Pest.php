@@ -1,5 +1,5 @@
 <?php
 
-use Vormkracht10\HtmlMinify\Tests\TestCase;
+use Vormkracht10\MinifyHtml\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
