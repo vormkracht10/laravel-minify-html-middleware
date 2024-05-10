@@ -41,6 +41,10 @@ class MinifyHtml
             return false;
         }
 
+        if(stripos(substr($request->getContent(), 0, 100), '<!DOCTYPE') !== false) {
+            return false;
+        }
+
         return true;
     }
 }
