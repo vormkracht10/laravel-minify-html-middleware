@@ -12,6 +12,6 @@ class MinifyHtmlServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-minify-html-middleware')
-            ->hasConfigFile('minify-html')
+            ->hasConfigFile('minify-html');
     }
 }
